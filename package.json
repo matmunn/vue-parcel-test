@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "vue": "^2.6.10",
+    "vue-function-api": "^2.0.6",
     "vue-hot-reload-api": "^2.3.3"
   },
   "devDependencies": {

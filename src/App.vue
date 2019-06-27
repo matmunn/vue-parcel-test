@@ -2,21 +2,30 @@
 <div>
   <span>{{ count }}</span>
   <button @click.prevent="increment">+</button>
+  <button @click.prevent="decrement">-</button>
 </div>
 </template>
 
 <script>
+import { value } from 'vue-function-api'
+
 export default {
-  name: 'App',
-  data: function () {
+  setup () {
+    const count = value(0)
+
+    const increment = () => {
+      count.value++
+    }
+
+    const decrement = () => {
+      count.value--
+    }
+
     return {
-      count: 0,
+      count,
+      increment,
+      decrement,
     }
   },
-  methods: {
-    increment () {
-      this.count++
-    }
-  }
 }
 </script>
